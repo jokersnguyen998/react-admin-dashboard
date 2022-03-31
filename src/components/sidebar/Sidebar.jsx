@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
     LineStyle,
     Timeline,
@@ -38,18 +39,24 @@ export default function Sidebar() {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Qick Menu</h3>
                     <ul className="sidebarList">
-                        <li className="sidebarListItem">
-                            <PersonOutline className="sidebarIcon" />
-                            Users
-                        </li>
-                        <li className="sidebarListItem">
-                            <Storefront className="sidebarIcon" />
-                            Products
-                        </li>
-                        <li className="sidebarListItem">
-                            <AttachMoney className="sidebarIcon" />
-                            Transactions
-                        </li>
+                        <Link to="/users" className="link">
+                            <li className="sidebarListItem">
+                                <PersonOutline className="sidebarIcon" />
+                                Users
+                            </li>
+                        </Link>
+                        <Link to="/products" className="link">
+                            <li className="sidebarListItem">
+                                <Storefront className="sidebarIcon" />
+                                Products
+                            </li>
+                        </Link>
+                        <Link to="/transactions" className="link">
+                            <li className="sidebarListItem">
+                                <AttachMoney className="sidebarIcon" />
+                                Transactions
+                            </li>
+                        </Link>
                         <li className="sidebarListItem">
                             <BarChart className="sidebarIcon" />
                             Reports
